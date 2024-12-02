@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Opale",
+  "description": "Custom prompts for seamless online text interactions",
+  "version": "1.0",
+  "action": {
+    "default_icon": "opale128.png"
+  },
+  "icons": {
+    "16": "opale16.png",
+    "48": "opale48.png",
+    "128": "opale128.png"
+  },
+  "permissions": [
+    "aiLanguageModelOriginTrial",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "contextMenus",
+    "storage",
+    "clipboardRead",
+    "clipboardWrite"
+  ],
+  "key": "lnanogebdalfkapejlckbimianpompjo",
+  "trial_tokens": [
+    "ArD6twVPjEaKfK+8YixXgyd5slWuQ04zwWcywxruRJDVmv+biA6aMU9LC8YwA3X/jdFBHONjEGbQiVqNV66HNwIAAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vbG5hbm9nZWJkYWxma2FwZWpsY2tiaW1pYW5wb21wam8iLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-opale": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      },
+      "description": "Open the Opale search bar on any web page to access the various tools using the defined keyboard shortcut"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["home.html", "edit.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

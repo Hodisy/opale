@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opale Settings</title>
+    <script type="module" src="edit.js"></script>
+    <link rel="stylesheet" href="edit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="page-info">
+                <button id="back-button" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1>Opale Settings</h1>
+            </div>
+            <button id="save-button" class="save-button" disabled>Save</button>
+        </header>
+        <main>
+            <div id="card" class="card">
+                <div class="section">
+                    <label class="section-label">
+                        Icon
+                    </label>
+                    <div class="icon-selector">
+                    </div>
+                </div>
+                <div class="section metadata">
+                    <div class="title">
+                        <label for="title" class="section-label">
+                            Title
+                        </label>
+                        <input type="text" id="title" name="title" disabled
+                            placeholder="Your tool’s flashy alias goes here" />
+                    </div>
+                    <div class="version">
+                        <label for="version" class="section-label">
+                            Version
+                        </label>
+                        <input type="text" id="version" name="version" disabled
+                            placeholder="Your version, your rules" />
+                    </div>
+                </div>
+                <div class="section">
+                    <label for="prompt" class="section-label">
+                        Prompt
+                    </label>           
+                    <textarea id="prompt" name="prompt" rows="18" spellcheck="false" disabled
+                        placeholder="Write something brilliant. I’ll make it even better"></textarea>
+                        <div id="toggle-group" class="toggle-group" id="toggleGroup">
+                            <button class="toggle-button" data-value="replace_all" disabled>
+                                <span>Replace All</span>
+                            </button>
+                            <button class="toggle-button" data-value="replace_selection" disabled>
+                                <span>Replace selection</span>
+                            </button>
+                            <button class="toggle-button" data-value="insert_at_end" disabled>
+                                <span>Insert at the end</span>
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
