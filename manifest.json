@@ -23,7 +23,7 @@
   ],
   "key": "lnanogebdalfkapejlckbimianpompjo",
   "trial_tokens": [
-    "ArD6twVPjEaKfK+8YixXgyd5slWuQ04zwWcywxruRJDVmv+biA6aMU9LC8YwA3X/jdFBHONjEGbQiVqNV66HNwIAAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vbG5hbm9nZWJkYWxma2FwZWpsY2tiaW1pYW5wb21wam8iLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9"
+    "AgkRwjdVuMWhI4TgTQy5E67CHi03kY4YOLZDCGcmN00gVZIQ8BqK3Zb5T0ghTxqQQIVkX2cTLzXSH5Rr/IAo5AgAAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vb3BqYWNucGhuZ2dscGZvYWFjYmxiYmxjY2xnZ2ZoY2YiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9"
   ],
   "background": {
     "service_worker": "background.js"
