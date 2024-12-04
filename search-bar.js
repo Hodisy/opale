@@ -1,5 +1,5 @@
 /* global chrome */
-/* global chrome */
+
 const style = {
   container: {
     position: 'fixed',
@@ -116,9 +116,13 @@ const gemini = async (system, user) => {
   let session = null;
   try {
     session = await chrome.aiOriginTrial.languageModel.create({
-      systemPrompt: 'You are a helpful and friendly assistant.',
+      systemPrompt: system,
     });
-    const output = await session.prompt('What is the capital of Italy?');
+    console.log(system, user);
+    const output = await session.prompt(user);
+    console.log(output);
+
+    session.destroy();
     return output;
   } catch (error) {
     console.error('Error during API call:', error);
@@ -682,7 +686,6 @@ const dynamicSearchBar = async () => {
   const _focusout = (event) => {
     const relatedTarget = event.relatedTarget;
     if (!container.contains(relatedTarget)) {
-      _close();
     }
   };
   const suggestions = suggestionsHandler(
