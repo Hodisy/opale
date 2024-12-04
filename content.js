@@ -1,5 +1,5 @@
 /* global chrome */
-/* global chrome */
+
 const style = {
   container: {
     position: 'fixed',
@@ -56,7 +56,7 @@ const style = {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
     opacity: '0',
     transition: 'opacity 0.5s ease, transform 0.5s ease',
-    zIndex: '1000',
+    zIndex: '11010',
   },
 };
 const backgroundColor = {
@@ -115,10 +115,11 @@ const htmlElementCreator = {
 const gemini = async (system, user) => {
   let session = null;
   try {
-    session = await chrome.aiOriginTrial.languageModel.create({
-      systemPrompt: 'You are a helpful and friendly assistant.',
+    session = await window.ai.languageModel.create({
+      systemPrompt: system,
     });
-    const output = await session.prompt('What is the capital of Italy?');
+    const output = await session.prompt(user);
+    session.destroy();
     return output;
   } catch (error) {
     console.error('Error during API call:', error);
